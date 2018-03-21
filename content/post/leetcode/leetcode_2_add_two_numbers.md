@@ -1,9 +1,22 @@
 ---
-title: "Leetcode 2. Add Two Numbers"
+author: "Weibin Luo"
+title: "LeetCode 2. Add Two Numbers"
 date: 2017-06-18T22:13:34+09:00
 draft: false
-tags: ["Leetcode", "Algorithm"]
-categories: ["Leetcode"]
+tags:
+- Leetcode
+- Algorithm
+categories:
+- Leetcode
+keywords:
+- leetcode
+thumbnailImage: http://res.cloudinary.com/luoweibinb/image/upload/c_scale,w_150/v1521594161/hugo/leetcode/LeetCode_logo.png
+thumbnailImagePosition: left
+---
+
+用链表接收 2个非负整数求和后把结果用链表返回
+<!--more-->
+
 ---
 
 # Question
@@ -16,13 +29,15 @@ categories: ["Leetcode"]
 >
 > Output: 7 -> 0 -> 8
 
+<!--more-->
+
 **view on [leetcode.com][question-link]**
 
---------------------
+---
 
 # Solution
 
-如同在纸上进行加法运算（如图），只要把每一位相加，并且考虑进位的情况即可。
+和在纸上做加法一样（如图），只要把每一位相加，并且考虑进位的情况即可。
 
 需要注意的是 `ListNode` 的开头表示的是**最低位**。
 
@@ -38,18 +53,23 @@ categories: ["Leetcode"]
 
 [![clue-ap2][clue-ap2]][clue-ap2]
 
+---
+
 # 复杂度
 
 * 时间复杂度：O(n)
 * 空间复杂度：O(n)
 
-时间和空间复杂度都与两个 `ListNode` 中较长的那个的长度有关
+时间和空间复杂度都和两个 `ListNode` 中较长的那个的长度有关
 
-# Java代码
+---
+
+# 代码
 
 [LeetCode 2. Add Two Numbers][solution]
 
-``` java
+{{< tabbed-codeblock "Add Two Numbers" >}}
+    <!-- tab java -->
 public ListNode solution(ListNode l1, ListNode l2) {
     // result 作为 dummy 头节点，最终返回 result.next
     ListNode result = new ListNode(0);
@@ -80,8 +100,9 @@ public ListNode solution(ListNode l1, ListNode l2) {
     }
     return result.next;
 }
+    <!-- endtab -->
+{{< /tabbed-codeblock >}}
 
-```
 
 [question-link]:https://leetcode.com/problems/add-two-numbers/#/description
 [clue-ap1]:http://res.cloudinary.com/luoweibinb/image/upload/v1521467842/hugo/leetcode/2-add-two-numbers.png
