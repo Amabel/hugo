@@ -4,8 +4,9 @@ title: "Leetcode 3. Longest Substring without Repeating Characters"
 date: 2017-06-12T18:32:57+09:00
 draft: false
 tags:
-- Leetcode
-- Algorithm
+- leetcode
+- algorithm
+- substring
 categories:
 - Leetcode
 keywords:
@@ -14,22 +15,18 @@ thumbnailImage: http://res.cloudinary.com/luoweibinb/image/upload/c_scale,w_150/
 thumbnailImagePosition: left
 ---
 
-最长非重复的子字符串
+Given a string, find the **length** of the **longest substring** without repeating characters.
 <!--more-->
 
-# Question
+**Example:**
 
-> Given a string, find the **length** of the **longest substring** without repeating characters.
->
-> **Example:**
->
-> Given `"abcabcbb"`, the answer is `"abc"`, which the length is 3.
->
-> Given `"bbbbb"`, the answer is `"b"`, which the length is 1.
->
-> Given `"pwwkew"`, the answer is `"wke"`, which the length is 3. Note that the answer must be a **substring**, `"pwke"` is a _subsequence_ and not a substring.
+Given `"abcabcbb"`, the answer is `"abc"`, which the length is 3.
 
-**view on [leetcode.com][question-link]**
+Given `"bbbbb"`, the answer is `"b"`, which the length is 1.
+
+Given `"pwwkew"`, the answer is `"wke"`, which the length is 3. Note that the answer must be a **substring**, `"pwke"` is a _subsequence_ and not a substring.
+
+**[leetcode.com][question-link]**
 
 --------------------
 
@@ -41,9 +38,13 @@ thumbnailImagePosition: left
 
 ### 复杂度
 
-* 时间复杂度：**O(n<sup>3</sup>)** 列出所有的子字符串需要的时间为 O(n<sup>2</sup>)， 判断每个子字符串中是否有重复的字符需要的时间为 O(n)，因此总体时间复杂度为 O(n<sup>3</sup>)。
+* 时间复杂度：**O(n<sup>3</sup>)**
 
-* 空间复杂度：**O(min(n, m))** 判断是否有重复的字符时，需要 O(k) 的空间来存放子字符串。此处 k 为 `Set` 的大小，取决于字符串的大小 n 或是所有字符 _(the size of the charset / alphabet)_ 的总数 m。（相当于常数复杂度）
+* 空间复杂度：**O(min(n, m))**
+
+列出所有的子字符串需要的时间为 O(n<sup>2</sup>)， 判断每个子字符串中是否有重复的字符需要的时间为 O(n)，因此总体时间复杂度为 O(n<sup>3</sup>)。
+
+判断是否有重复的字符时，需要 O(k) 的空间来存放子字符串。此处 k 为 `Set` 的大小，取决于字符串的大小 n 或是所有字符 _(the size of the charset / alphabet)_ 的总数 m。（相当于常数复杂度）
 
 ### 代码
 
@@ -76,15 +77,17 @@ public boolean allUnique(String s, int start, int end) {
 
 ## 解法 2
 
-（使用 2 个指针，最多遍历两次字符串）
+（用 2 个指针，最多遍历两次字符串）
 
-使用 2 个指针 `i` 和 `j`，首先把它们都指向字符串的首位，向右移动指针 `j` 直到 `j` 指向的字符与 `i` 指向的字符相同，此时 `i` 到 `j - 1` 之间的字符串就是一个不含有重复字符的子字符串，记录它的长度并且更新最大长度，最后把 `i` 向右移动 1 作为新的起点。
+用 2 个指针 `i` 和 `j`，首先把它们都指向字符串的首位，向右移动指针 `j` 直到 `j` 指向的字符与 `i` 指向的字符相同，此时 `i` 到 `j - 1` 之间的字符串就是一个不含有重复字符的子字符串，记录它的长度并且更新最大长度，最后把 `i` 向右移动 1 作为新的起点。
 
 ### 复杂度
 
 * 时间复杂度：**O(n)**
 
-* 空间复杂度：**O(1)** 用长度为 256 的数组来存放字符出现的情况，因此空间复杂度与字符串的长度无关，为常量 O(1)。
+* 空间复杂度：**O(1)**
+
+用长度为 256 的数组来存放字符出现的情况，因此空间复杂度与字符串的长度无关，为常量 O(1)。
 
 ### 代码
 

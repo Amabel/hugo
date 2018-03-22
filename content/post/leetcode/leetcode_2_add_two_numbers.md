@@ -4,8 +4,9 @@ title: "LeetCode 2. Add Two Numbers"
 date: 2017-06-18T22:13:34+09:00
 draft: false
 tags:
-- Leetcode
-- Algorithm
+- leetcode
+- algorithm
+- linked list
 categories:
 - Leetcode
 keywords:
@@ -14,24 +15,16 @@ thumbnailImage: http://res.cloudinary.com/luoweibinb/image/upload/c_scale,w_150/
 thumbnailImagePosition: left
 ---
 
-用链表接收 2个非负整数求和后把结果用链表返回
+You are given two **non-empty** linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 <!--more-->
 
----
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
-# Question
+Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 
-> You are given two **non-empty** linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
->
-> You may assume the two numbers do not contain any leading zero, except the number 0 itself.
->
-> Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
->
-> Output: 7 -> 0 -> 8
+Output: 7 -> 0 -> 8
 
-<!--more-->
-
-**view on [leetcode.com][question-link]**
+**[leetcode.com][question-link]**
 
 ---
 
