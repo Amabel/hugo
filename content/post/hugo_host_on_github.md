@@ -33,12 +33,12 @@ GitHub Pages 有两种页面：User Pages 和 Project Pages，这里讲一下怎
 2. 在 GitHub 上创建`<USERNAME>.github.io`项目，这个项目用来放编译后的静态网页（public下的内容）
 3. `git clone <YOUR-PROJECT-URL> && cd <YOUR-PROJECT>`
 4. （可选）确保 Hugo 可以在本地运行。`hugo server`然后在 http://localhost:1313 上查看
-5. （可选）确认后停止 Hugo `Ctrl + C`，并清除 Hugo 下的 public 文件夹`rm -rf public`
+5. （可选）停止 Hugo `Ctrl + C`，并清除 Hugo 下的 public 文件夹`rm -rf public`
 6. `git submodule add -b master git@github.com:<USERNAME>/<USERNAME>.github.io.git public` 在 public 下创建子模块并关联到`<USERNAME>.github.io.git`项目中
 
 # 自动提交并 push 到 GitHub
 
-将以下代码保存到`deploy.sh`放入 hugo 目录下：
+把下面的代码保存到`deploy.sh`放在 hugo 目录下：
 
 ```
 #!/bin/bash
@@ -67,7 +67,7 @@ git push origin master
 cd ..
 ```
 
-用`./deploy.sh "Your optional commit message"`实现提交和推送 public 下的静态网页
+用`./deploy.sh "Your optional commit message"`来提交和推送 public 下的静态网页
 
 # 参考
 
