@@ -20,7 +20,6 @@ thumbnailImagePosition: left
 <!--more-->
 ![Hugo](http://res.cloudinary.com/luoweibinb/image/upload/v1521591724/hugo/hugo-logo.png)
 
-
 # 关于 GitHub Pages
 
 GitHub Pages 有两种页面：User Pages 和 Project Pages，这里讲一下怎么把 Hugo 部署在 User Pages 上。

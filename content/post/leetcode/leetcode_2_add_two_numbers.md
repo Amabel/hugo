@@ -48,54 +48,57 @@ Output: 7 -> 0 -> 8
 
 ---
 
-# 复杂度
+# Complexity
 
-* 时间复杂度：O(n)
-* 空间复杂度：O(n)
+* 时间复杂度：**O(n)**
+* 空间复杂度：**O(n)**
 
 时间和空间复杂度都和两个 `ListNode` 中较长的那个的长度有关
 
 ---
 
-# 代码
+# Code
 
 [LeetCode 2. Add Two Numbers][solution]
 
 {{< tabbed-codeblock "Add Two Numbers" >}}
-    <!-- tab java -->
-public ListNode solution(ListNode l1, ListNode l2) {
-    // result 作为 dummy 头节点，最终返回 result.next
-    ListNode result = new ListNode(0);
-    ListNode p = l1, q = l2;
-    // 当前位的指针
-    ListNode current = result;
-    int carry = 0;
+<!-- tab java -->
+public class AddTwoNumbers {
+    public ListNode solution(ListNode l1, ListNode l2) {
+        // result 作为 dummy 头节点，最终返回 result.next
+        ListNode result = new ListNode(0);
+        ListNode p = l1, q = l2;
+        // 当前位的指针
+        ListNode current = result;
+        int carry = 0;
 
-    while (null != p || null != q) {
-        // 若指针为 null 则表示当前位为 0
-        // 这是为了应对 2 个链表长度不同，某一个链表先结束的情况
-        int x = (null != p) ? p.val : 0;
-        int y = (null != q) ? q.val : 0;
-        int sum = carry + x + y;
-        carry = sum / 10;
-        current.next = new ListNode(sum % 10);
-        current = current.next;
-        if (null != p) {
-            p = p.next;
+        while (null != p || null != q) {
+            // 若指针为 null 则表示当前位为 0
+            // 这是为了应对 2 个链表长度不同，某一个链表先结束的情况
+            int x = (null != p) ? p.val : 0;
+            int y = (null != q) ? q.val : 0;
+            int sum = carry + x + y;
+            carry = sum / 10;
+            current.next = new ListNode(sum % 10);
+            current = current.next;
+            if (null != p) {
+                p = p.next;
+            }
+            if (null != q) {
+                q = q.next;
+            }
         }
-        if (null != q) {
-            q = q.next;
+        // 别忘记处理最后的 carry
+        if (carry > 0) {
+            current.next = new ListNode(carry);
         }
+        return result.next;
     }
-    // 别忘记处理最后的 carry
-    if (carry > 0) {
-        current.next = new ListNode(carry);
-    }
-    return result.next;
 }
-    <!-- endtab -->
+<!-- endtab -->
 {{< /tabbed-codeblock >}}
 
+---
 
 [question-link]:https://leetcode.com/problems/add-two-numbers/#/description
 [clue-ap1]:http://res.cloudinary.com/luoweibinb/image/upload/v1521467842/hugo/leetcode/2-add-two-numbers.png
