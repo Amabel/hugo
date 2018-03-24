@@ -13,6 +13,6 @@ thumbnailImagePosition:
 <!--more-->
 
 {{< tabbed-codeblock "" >}}
-    <!-- tab java -->
-    <!-- endtab -->
+<!-- tab java -->
+<!-- endtab -->
 {{< /tabbed-codeblock >}}
