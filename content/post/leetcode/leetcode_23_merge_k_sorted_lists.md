@@ -29,7 +29,8 @@ Merge k sorted linked lists and return it as one sorted list. Analyze and descri
 
 ## 解法1 （优先级队列）
 
-把所有元素放入小根堆，依次取出每个元素。要注意的是堆的大小只要设置为 list 的长度，每次取出一个元素之后再把那个元素之后的元素放进堆里就可以了。
+把所有元素放入小根堆，依次取出每个元素。
+要注意的是堆的大小只要设置为 list 的长度，每次取出一个元素之后再把那个元素之后的元素放进堆里就可以了。
 
 ---
 

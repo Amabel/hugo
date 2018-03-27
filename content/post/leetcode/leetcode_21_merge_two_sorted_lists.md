@@ -65,9 +65,9 @@ public class MergeTwoSortedLists {
         if (l2 == null) {
             return l1;
         }
-        // dummy
-        ListNode ret = new ListNode(0);
-        ListNode currentNode = ret;
+        // dummy节点
+        ListNode dummy = new ListNode(0);
+        ListNode currentNode = dummy;
 
         // remaining elements
         while (l1 != null && l2 != null) {
@@ -93,8 +93,7 @@ public class MergeTwoSortedLists {
             l1 = l1.next;
             currentNode = currentNode.next;
         }
-        return ret.next;
-        }
+        return dummy.next;
     }
 }
 <!-- endtab -->
