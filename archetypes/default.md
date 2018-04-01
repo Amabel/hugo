@@ -2,12 +2,12 @@
 author: "Weibin Luo"
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+draft: false
 tags:
 categories:
 keywords:
 thumbnailImage:
-thumbnailImagePosition:
+thumbnailImagePosition: bottom
 ---
 
 <!--more-->
