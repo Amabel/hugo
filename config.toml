@@ -32,7 +32,7 @@ canonifyurls = true
 
 [author]
   name = "Weibin Luo"
-  bio = "资浅程序员"
+  bio = "RTFSC"
   job = ""
   location = "Tokyo"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
