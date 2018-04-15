@@ -79,7 +79,7 @@ $ rails migrate
 ```
 $ rails g controller Users
 ```
-会自动生成`users_controller.rb`，注意使用复数形式，rails会自动在后面加上`_controller`
+会自动生成`users_controller.rb`，注意使用复数形式，rails 会在后面加上`_controller`
 
 ---
 
