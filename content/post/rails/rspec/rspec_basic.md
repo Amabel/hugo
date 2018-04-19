@@ -18,7 +18,7 @@ thumbnailImage:
 thumbnailImagePosition: bottom
 ---
 
-使用`RSpec`写测试模块
+使用 RSpec 写测试模块
 <!--more-->
 
 ---
@@ -50,8 +50,3 @@ $ rails g rspec:install
 [https://www.jianshu.com/p/1db9ee327357](https://www.jianshu.com/p/1db9ee327357)
 
 [https://qiita.com/jnchito/items/42193d066bd61c740612](https://qiita.com/jnchito/items/42193d066bd61c740612)
-
-{{< tabbed-codeblock "" >}}
-<!-- tab java -->
-<!-- endtab -->
-{{< /tabbed-codeblock >}}

@@ -1,6 +1,6 @@
 ---
 author: "Weibin Luo"
-title: "Rails 学习笔记"
+title: "Rails 5 学习笔记"
 date: 2018-04-13T15:15:59+09:00
 draft: false
 tags:
@@ -46,7 +46,9 @@ $ rails g model Article title:string content:string user:references
 ```
 会自动在`Article`类下添加`belongs_to`语句，并在迁移文件中指定外键
 
-**注意外键总是在含有`belongs_to`语句的表中**
+{{< alert info >}}
+注意外键总是在含有`belongs_to`语句的表中
+{{< /alert >}}
 
 为了表明`User`和`Article`的关系，需要手动在`User`中添加`has_many`语句
 
@@ -93,6 +95,7 @@ Rails.application.routes.draw do
   resources :users
 end
 ```
+
 确认路径
 ```
 $ rails routes
@@ -120,16 +123,53 @@ $ curl -i http://localhost:3000/users/index.json
 ```
 ## POST
 
+```
+$ curl -u "name=bob&email=bob@gmail.com" http://localhost:3000/users/
+```
+
+---
+
+# 使用 Postman 发送请求
+
+[Postman](https://www.getpostman.com/) 可用于向服务器发送多种请求
+
 ---
 
 # 数据库种子文件
+
+```
+rails db:seed
+```
 
 ---
 
 # API
 
-## jbuilder
+用 Rails 写 API 的时候需要用到的一些工具
+
+
+## Jbuilder
+
+[Jbuilder](https://github.com/rails/jbuilder#jbuilder) 用于生成返回的`JSON`文件
+
+关于 Jbuilder 的介绍请戳[这里](https://amabel.github.io/2018/04/rails-jbuilder-%E7%9A%84%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95/)
+
+
 
 ---
 
-# 测试 Rsepc
+# 测试 RSepc
+
+RSpec 为常用的 Rails 测试框架
+
+（未完工）详细介绍戳[这里](https://amabel.github.io/2018/04/rspec_basic/)
+
+---
+
+# 各种语言的官方文档
+
+中文：[https://ruby-china.github.io/rails-guides/index.html](https://ruby-china.github.io/rails-guides/index.html)
+
+英文：[http://guides.rubyonrails.org/index.html](http://guides.rubyonrails.org/index.html)
+
+日文：[https://railsguides.jp/](https://railsguides.jp/)
